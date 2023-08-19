@@ -1,3 +1,9 @@
+ul li {
+	text-align: left;
+	display: list-item;
+}
+
+
 .App {
   text-align: center;
 }
@@ -19,7 +25,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 
 .App-header {
   background-color: #282c34;
@@ -43,4 +48,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.component {
+  border:1px solid gold;
+  padding: 1em;
+  margin: 0.5rem;
+  transition: all ease-in-out 100ms;
+}
+.component:hover{
+  border:1px solid yellow ;
 }
