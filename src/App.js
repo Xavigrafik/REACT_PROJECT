@@ -10,10 +10,12 @@ function App() {
       <header className="App-header">
 
         <ComponentEvento></ComponentEvento>
-        
+
         <Component1></Component1>
-        <Component2 titulo="titulo from App.js"></Component2>
+
         <Component2></Component2>
+        <Component2 titulo="titulo from App.js"></Component2>
+        
         
 
       </header>
