@@ -8,10 +8,11 @@ let arr = ['uno', 'dos', 'tres', 'cuatro', 'cinco' ];
 export const Component1 = () => {
 
     const[nombre, setNombre] = useState('default!');
-    const classes = `componente1 component  `
+    const classes = `componente1 component`
+    
     const cambiarNombre = (nom)=> {
         if (nom) {
-            setNombre(nom)
+            setNombre(nom);
         } else {
             setNombre('??')
         }

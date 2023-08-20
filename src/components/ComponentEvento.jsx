@@ -1,26 +1,33 @@
-import React from 'react'
+import {useState } from 'react'
+import PropTypes from 'prop-types';
 
-  const handleClick = (e) =>{
-    console.log(e);
-  }
+export const ComponentEvento = ({value}) => {
+    
+    const [contador, setContador] = useState(value);
 
-  const Boton = () => {
+    const addCount = () =>{
+        setContador(contador + 10);
+    }
+
+    const reset = () =>{
+        setContador(0);
+    }
+
+        
     return (
-      <button onClick={handleClick}>Click me!</button>
+        <div className='component'>
+
+            <h3>COMPONENT EVENTO </h3>
+
+            <button onClick={addCount}>Click me!</button>
+            <button onClick={reset}>Reset!</button>
+
+            <p>Contador: {contador}</p>
+        </div>
     )
-  }
-
-
-
-export const ComponentEvento = () => {
-  
-  return (
-    <div className='component'>
-        <h3>COMPONENT EVENTO </h3>
-        <Boton></Boton>
-        <br />
-        <Boton></Boton>
-    </div>
-  )
 }
 
+
+ComponentEvento.propTypes = {
+    value: PropTypes.number,
+};
